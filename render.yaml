@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: reconai-core-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host 0.0.0.0 --port 8000"
+    plan: free
+    autoDeploy: true
+    region: oregon
